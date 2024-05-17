@@ -1,0 +1,12 @@
+[Unit]
+Description = Automount gluster filesystem
+After=pcsd.service
+
+[Mount]
+What=localhost:/swarm-vols
+Where=glusterfs/docker/
+Type=glusterfs
+
+
+[Install]
+WantedBy = multi-user.target
